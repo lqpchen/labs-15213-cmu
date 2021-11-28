@@ -1,0 +1,30 @@
+1. Running './dlc -z' to identify coding rules violations.
+
+2. Compiling and running './btest -g' to determine correctness score.
+gcc -O -Wall  -lm -o btest bits.c btest.c decl.c tests.c 
+
+3. Running './dlc -Z' to identify operator count violations.
+
+4. Compiling and running './btest -g -r 2' to determine performance score.
+gcc -O -Wall  -lm -o btest bits.c btest.c decl.c tests.c 
+
+
+5. Running './dlc -e' to get operator count of each function.
+
+Correctness Results	Perf Results
+Points	Rating	Errors	Points	Ops	Puzzle
+1	1	0	2	8	bitXor
+1	1	0	2	1	tmin
+1	1	0	2	6	isTmax
+2	2	0	2	9	allOddBits
+2	2	0	2	2	negate
+3	3	0	2	7	isAsciiDigit
+3	3	0	2	10	conditional
+3	3	0	2	17	isLessOrEqual
+4	4	0	2	11	logicalNeg
+4	4	0	2	79	howManyBits
+4	4	0	2	22	floatScale2
+4	4	0	2	20	floatFloat2Int
+4	4	0	2	11	floatPower2
+
+Score = 62/62 [36/36 Corr + 26/26 Perf] (203 total operators)
